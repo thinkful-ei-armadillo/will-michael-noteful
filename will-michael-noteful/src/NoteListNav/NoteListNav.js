@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Link } from 'react-router-dom';
+import Button from '../Button/Button';
 import './NoteListNav.css';
 
 const countNotesForFolder = (notes=[], folderId) =>
@@ -24,9 +25,9 @@ function NoteListNav(props) {
                 )}
             </ul>
             <br />
-            <button tag={Link} to="/addFolder" type="button" className="addNFolderBtn">
+            <Button tag={Link} to="/addFolder" type="button" className="addNFolderBtn">
                 Add Folder
-            </button>
+            </Button>
         </section>
     )
 }
