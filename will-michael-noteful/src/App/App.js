@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import AddFolder from './AddFolder/AddFolder';
-import AddNote from './AddNote/AddNote';
-import NoteListMain from './NoteListMain/NoteListMain';
-import NoteListNav from './NoteListNav/NoteListNav';
-import NotePageMain from './NotePageMain/NoteListMain';
-import NotePageNav from './NotePageNav/NotePageNav';
+import AddFolder from '../AddFolder/AddFolder';
+import AddNote from '../AddNote/AddNote';
+import NoteListMain from '../NoteListMain/NoteListMain';
+import NoteListNav from '../NoteListNav/NoteListNav';
+import NotePageMain from '../NotePageMain/NotePageMain';
+import NotePageNav from '../NotePageNav/NotePageNav';
 import { Route, Link } from 'react-router-dom';
-import dummyStore from './dummy-store';
+import dummyStore from '../dummy-store';
 
 function findNote(notes = [], noteId) {
   notes.find(note => note.id === noteId)
@@ -62,11 +62,11 @@ class App extends Component {
           }}
         />
         <Route
-          path='/add-folder'
+          path="/addFolder"
           component={NotePageNav}
         />
         <Route
-          path='/add-note'
+          path="/add-note"
           component={NotePageNav}
         />
       </>

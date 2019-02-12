@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Note from './Note/Note';
+import Note from '../Note/Note';
 import './NoteListMain.css';
 
 function NoteListMain(props) {
     return(
         <section className='NoteListMain' >
             <ul>
-                {props.notes.map(note =>
+                {props.notes.map(note => 
                     <li key={note.id}>
                         <Note 
                             id={note.id}
@@ -17,8 +17,9 @@ function NoteListMain(props) {
                     </li>
                 )}
             </ul>
+
             <button tag={Link} to="/addNote" type="button" className="addNoteBtn">
-                Note
+                Add note
             </button>
         </section>
     )
