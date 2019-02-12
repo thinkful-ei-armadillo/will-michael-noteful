@@ -11,9 +11,6 @@ export default function Note(props){
                     {props.name}
                 </Link>
             </h2>
-            <button className="deleteNote" type="button">
-                Remove
-            </button>
             <div className="noteDate">
                 Modified
                 <span className="date">

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import Note from '../Note/Note';
+import Button from '../Button/Button';
 import './NoteListMain.css';
 
 function NoteListMain(props) {
@@ -18,9 +19,9 @@ function NoteListMain(props) {
                 )}
             </ul>
 
-            <button tag={Link} to="/addNote" type="button" className="addNoteBtn">
-                Add note
-            </button>
+            <Button tag={Link} to="../AddNote" type="button" className="addNoteBtn">
+                Add Note
+            </Button>
         </section>
     )
 }
