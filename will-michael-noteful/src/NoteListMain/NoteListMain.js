@@ -1,9 +1,8 @@
 import React from "react";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Note from './Note/Note';
 import './NoteListMain.css';
 
-// this is for notes on main page
 function NoteListMain(props) {
     return(
         <section className='NoteListMain' >
@@ -18,11 +17,15 @@ function NoteListMain(props) {
                     </li>
                 )}
             </ul>
-            <button>
-
+            <button tag={Link} to="/addNote" type="button" className="addNoteBtn">
+                Note
             </button>
         </section>
     )
+}
+
+NoteListMain.defaultProps = {
+    notes: []
 }
 
 export default NoteListMain;
